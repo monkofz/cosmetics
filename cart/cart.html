@@ -1,169 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cart.css">
     <style>
-        #img{
-            width: 90%;
-            height: 20%;
-            
+        * {
+            font-family: "BBSans Regular", Helvetica, Arial, sans-serif;
+
+            /* border: 1px solid red */
+        }
+
+        #freeshipping {
+            background-color: #eff0f0;
+            height: 45px;
+            width: 92%;
+            display: flex;
+            padding-left: 20px;
+            align-items: center;
+        }
+
+        #line {
+            width: 95%;
+            background-color: black;
+            height: 2px;
+        }
+
+        a {
+            color: lightgray;
 
         }
-        h2+div{
-            background-color: black;
-            height: 1px;
-            width: 40%;
-        }
-        #bdiv{
-            background-color: rgb(231, 228, 228);
-            height: 45px;
-            width: 90%;
-        }
-        #line{
-           width: 90%;
-        }
-        #hr1{
-            width: 120%;
-        }
-        #enjoy{
-            font-family: "BBText Regular",Helvetica,Arial,sans-serif;
-            font-size: 14px;
-            margin-top: 2px;
-        
-        }
-        #divp{
-            background-color: rgb(229, 225, 225);
-            height: 1px;
-            width: 90%;
-        }
-       
-        #but1{
+
+        .button {
             background-color: black;
             color: white;
             height: 42px;
             width: 120px;
-            border-radius: 1px;
-            border: 0px;
-            text-decoration: solid;
-            margin-top: 30px;
-            margin-left: 300px
+            margin-top: 150px;
+            float: right;
         }
-    
-        #red{
+
+        #red {
             color: red;
             margin-top: 50px;
+            margin-bottom: 50px;
         }
-        #para{
+
+        #container {
+            display: flex;
+            height: auto;
+            width: 50%;
+        }
+
+
+        #aboveProducts {
+            display: flex;
+            margin: auto;
+            justify-content: space-evenly;
+
+        }
+
+        h1 {
+            font-size: 15px;
+
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
             margin-top: 50px;
         }
-        #selec{
-            margin-top: 40px;
-            width: 120%;
+
+        .box {
+            width: 50%;
+            /* height: 800px; */
+
+        }
+
+        #button2 {
+            float: left;
+            margin-left: 30px;
+            margin: 30px
+        }
+
+        hr {
+            margin-right: 20px;
+        }
+
+        #para {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 70%;
             height: 30px;
         }
-        #but2{
-            background-color: black;
-            color: white;
-            height: 42px;
-            width: 120px;
-            border-radius: 1px;
-            border: 0px;
-            text-decoration: solid;
-            margin-top: 30px;
-          
+
+        #prodimg {
+            margin-left: 40px;
+            width: 70%;
+            height: 250px;
+        }
+
+        #box {
+            display: flex;
+        }
+
+        #box2 {
+            text-align: center;
+            /* margin: auto; */
+            /* display: flex; */
+        }
+
+        img+p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 50px; */
+            margin-left: 50px;
+        }
+
+        #pricebox {
+
+            display: flex;
+            justify-content: end;
+            align-items: center;
 
         }
-        #outer{
-            margin-top: 100px;
+
+        #total {
+            margin: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+            margin-right: 120px;
+            font-weight: bold;
+
+        }
+
+        #longline {
+            margin: auto;
+
+            /* border: 1px solid red; */
+            background-color: gray;
+            width: 90%;
+            height: 0.5px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        #footer {
+            display: flex;
+            width: 100%;
             height: 200px;
             background-color: black;
-            padding: 30px;
         }
-        #content{
-            color:gray;
-            margin-left: 10px;
-            
-        }
-        #container{
-            display: flex;
-            /* grid-template-columns: repeat(2,1fr); */
-            /* gap: 30px; */
-            
-        }
-        #box{
-            margin-left: 10%;
-        }
-        #box2{
-            margin-right: 25%;
 
+        #footercontainer1 {
+            width: 50%;
+            height: 200px;
+            /* border: 1px solid red; */
+            color: white;
+            margin-top: 40px;
+            margin-left: 10px;
+            justify-content: end;
+            align-items: flex-end;
         }
-       #para2{
-           width: 120%;
-       }
-       #para3{
-           color: gray;
-           display: grid;
-           grid-template-columns: repeat(2,1fr);
-           
-       }
+
+        #footercontainer2 {
+            width: 25%;
+            height: 200px;
+            /* border: 1px solid red; */
+            color: white;
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+
+        #footercontainer3 {
+            width: 25%;
+            height: 200px;
+            /* border: 1px solid red; */
+            color: white;
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+        #footercontainer3>img:first-child{
+            width: 30%;
+
+            display: block; 
+            /* margin-bottom: 20px; */
+            margin: auto;
+            padding-left: 60px;
+            
+        }
+        #footercontainer3>img:nth-child(2){
+            width: 20%;
+            display: block;
+            padding-top: 30px;
+            padding-left: 60px;
+            margin: auto;
+        }
     </style>
-   
+
 </head>
+
 <body>
     <div id="container">
-        <div id="box">
-            <img id="img" src="https://www.bobbibrowncosmetics.com/media/export/cms/offers/BB_Banner_Loyalty_728x90.jpg" alt="">
+        <div class="box">
             <h2>SHOPPING BAG</h2>
-            <div id="line"><hr></div>
-            <div id="bdiv"><P id="enjoy">Enjoy Free Standard Shipping on any $65+ order.</P></div>
-           
-            
-            <P id="red">Please add a product to your shopping bag in order to checkout.</P>
-            <P id="para">If you have previously added items to your shopping cart, <a href="https://www.bobbibrowncosmetics.com/account/email-sms-signup.tmpl">sign in</a> to see them.
+            <div id="line"></div>
+            <div id="freeshipping">
+                Enjoy Free Standard Shipping on any $65+ order.
+            </div>
+            <div id="aboveProducts">
+
+            </div>
+            <div id="products">
+
+            </div>
+
+            <pre id="total">
+
+            </pre>
+
+            <!--             IF THE CART IS EMPTY          -->
+            <!-- <P id="red">Please add a product to your shopping bag in order to checkout.</P> -->
+
+            <div id="products">
+
+            </div>
+            <P id="para">If you have previously added items to your shopping cart, <a
+                    href="https://www.bobbibrowncosmetics.com/account/email-sms-signup.tmpl">sign in</a> to see them.
             </P>
-            <div id="divp"><hr></div>
-            <button id="but1"> <b>GO SHOPPING</b> </button>
+            <div>
+                <hr>
+            </div>
+
+            <button class="button"> <b>GO SHOPPING</b> </button>
         </div>
-        <div id="box2">
+        <div class="box">
+            <div id="freeshipping">
+
+            </div>
             <h2>DONATE</h2>
-           <div id="hr1"><hr></div>
-            <div><img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/80x80/bb_prod_555877_80x80_0.jpg" alt=""></div>
-            
-            <select id="selec">
-                
+            <hr </div>
+            <div><img
+                    src="https://www.bobbibrowncosmetics.com/media/export/cms/products/80x80/bb_prod_555877_80x80_0.jpg"
+                    alt=""></div>
+
+            <select>
+
                 <option value="">BCRF DONATION</option>
                 <option value="">SHE'S THE FIRST</option>
-              </select>
-              <p id="para2">Donate today to The Breast Cancer Research Foundation to support life-saving research. <a href="#" class="promo" aria-label="Donate today to The Breast Cancer Research Foundation to support life-saving research. Learn More about BCRF.">Learn More</a> about BCRF.</p>
+            </select>
+            <p id="para2">Donate today to The Breast Cancer Research Foundation to support life-saving research. <a
+                    href="#" class="promo"
+                    aria-label="Donate today to The Breast Cancer Research Foundation to support life-saving research. Learn More about BCRF.">Learn
+                    More</a> about BCRF.</p>
 
-              <input type="radio" name="Donate">$1.00
-              <input type="radio" name="Donate">$5.00
-              <input type="radio" name="Donate">$10.00
+            <input type="radio" name="Donate">$1.00
+            <input type="radio" name="Donate">$5.00
+            <input type="radio" name="Donate">$10.00
 
-              <div><button id="but2">ADD TO BAG</button></div>
-          
+            <div><button class="button" id="button2">ADD TO BAG</button></div>
+
         </div>
-       
+
     </div>
-   
-    
-    <div id="outer">
-        <div id="content"> <p>© Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.</p>
+    <div id="longline">
+
+    </div>
+
+    <div id="footer">
+        <div id="footercontainer1">
+            © Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.
         </div>
-        <div id="para3">
-            
-                <div><p>Terms & Conditions</p></div>
-                <div><p>Interest Based Ads</p></div>
-            
-            <div><p>California Do Not Sell My <br> Personal Information</p></div>
-            <div><p>Privacy Policy</p></div>
-            <div><p>Accessibility</p></div>
-            
+        <div id="footercontainer2">
+            <pre>Terms & Conditions      Interest Based Ads</pre>
+            <h5>
+                California Do Not Sell My Personal Information
+                Privacy Policy
+            </h5>
+            <h5>Accessibility</h5>
         </div>
-     </div>  
+        <div id="footercontainer3">
+           <img src="https://www.bobbibrowncosmetics.com/media/export/cms/live_chat/icon-livechat_@2x.png" alt="">
+           <img src="https://www.bobbibrowncosmetics.com/media/images/global/bobbi_access_icon.jpg" alt="">
+        </div>
+    </div>
+
+
 </body>
+
 </html>
+
+<script>
+
+    var cartItems = JSON.parse(localStorage.getItem("cart"));
+
+    // console.log("caaaaaaaaaaart", cartItems);
+
+
+    var bigBox = document.getElementById("products");
+
+    var total = document.getElementById("total");
+
+
+    function pqpt() {
+        var aboveProducts = document.getElementById("aboveProducts");
+        var hh1 = document.createElement("h1");
+        hh1.innerText = "Product"
+
+        // var hh2 = document.createElement("h1");
+        // hh2.innerText = "Quantity"
+
+        var hh3 = document.createElement("h1");
+        hh3.innerText = "Price"
+
+        var hh4 = document.createElement("h1");
+        hh4.innerText = "Total";
+
+        aboveProducts.append(hh1, hh3, hh4);
+    }
+
+    pqpt();
+
+    function displayData(cartItems) {
+        cartItems.map(function (el) {
+            var box = document.createElement("div");
+            var box2 = document.createElement("div");
+
+            box.setAttribute("id", "box");
+            box2.setAttribute("id", "box2");
+
+            var img = document.createElement("img");
+            img.src = el.image_url;
+            img.setAttribute("id", "prodimg")
+
+            var name = document.createElement("p");
+            name.textContent = el.name;
+
+            box2.append(img, name);
+
+            var pricebox = document.createElement("div")
+            pricebox.setAttribute("id", "pricebox")
+
+            var div1 = document.createElement("div")
+            var price = document.createElement("h3");
+
+            price.textContent = el.price;
+            div1.append(price);
+
+            var div2 = document.createElement("div")
+
+            pricebox.append(div1, div2);
+
+            box.append(box2, pricebox);
+            bigBox.append(box);
+
+        });
+        // string.replace('characterToReplace', '');
+        var totalprice = cartItems.reduce(function (sum, el) {
+            el.price = el.price.replace("$", "");
+            return sum + Number(el.price)
+        }, 0);
+
+        console.log("total", totalprice);
+
+        total.innerText = "Total Amount       $" + totalprice
+
+    }
+
+    displayData(cartItems);
+
+</script>

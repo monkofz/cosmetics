@@ -65,7 +65,7 @@
             </pre>
 
             <!--             IF THE CART IS EMPTY          -->
-            <!-- <P id="red">Please add a product to your shopping bag in order to checkout.</P> -->
+            <p id="red"></p>
 
             <div id="products">
 
@@ -146,6 +146,8 @@
 
     var total = document.getElementById("total");
 
+    var emptytag = document.getElementById("red");
+
 
     function pqpt() {
         var aboveProducts = document.getElementById("aboveProducts");
@@ -179,9 +181,15 @@
             img.setAttribute("id", "prodimg")
 
             var name = document.createElement("p");
+            var btn = document.createElement("button");
             name.textContent = el.name;
+            btn.innerText = "REMOVE";
+            btn.setAttribute("id","btn");
+            btn.addEventListener("click",function(){
+                removeItem(el);
+            });
 
-            box2.append(img, name);
+            box2.append(img, name , btn);
 
             var pricebox = document.createElement("div")
             pricebox.setAttribute("id", "pricebox")
@@ -208,11 +216,25 @@
 
         console.log("total", totalprice);
 
+       if(cartItems.length == 0){
         total.innerText = "Total Amount       $" + totalprice
+       }
 
     }
 
     displayData(cartItems);
     
+
+    function removeItem(el){
+        cartItems.splice(el,1);
+        localStorage.setItem("cart",JSON.stringify(cartItems));
+      
+        displayData(cartItems);
+
+        
+          window.location.reload();
+         
+
+    }
 
 </script>

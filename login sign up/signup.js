@@ -23,7 +23,7 @@ function signin(){
   
   for(i=0;i<signin.length;i++)
   {
-    if(Email===signin[i].email && Passwd===signin[i].passwd){
+    if(Email==signin[i].email && Passwd==signin[i].passwd){
       alert("Login sucsessfully")
       return
     }

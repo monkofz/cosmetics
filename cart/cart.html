@@ -64,6 +64,8 @@
                 <pre id="total">
     
                 </pre>
+
+                <button class="button2"> <b>CHECK OUT</b> </button>
     
                 <!--             IF THE CART IS EMPTY          -->
                 <p id="red"></p>
@@ -218,7 +220,7 @@
 
         console.log("total", totalprice);
 
-        if (cartItems.length == 0) {
+        if (cartItems.length != 0) {
             total.innerText = "Total Amount       $" + totalprice
         }
 
@@ -237,6 +239,20 @@
         window.location.reload();
 
 
+    }
+
+    var checkout = document.querySelector(".button2");
+
+    checkout.addEventListener("click",function(){
+        proceed();
+    })
+
+
+    function proceed(){
+        if(total == 0){
+            alert("Please add items first");
+        }
+        // window.location.href = "checkout.html"
     }
 
 </script>

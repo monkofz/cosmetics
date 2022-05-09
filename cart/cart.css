@@ -33,6 +33,15 @@ a {
     float: right;
 }
 
+.button2 {
+    background-color: black;
+    color: white;
+    height: 42px;
+    width: 120px;
+    margin-top: 20px;
+    margin-right: 50px;
+    float: right;
+}
 #red {
     color: red;
     margin-top: 50px;
@@ -75,6 +84,7 @@ h1 {
     float: left;
     margin-left: 30px;
     margin: 30px
+    
 }
 
 hr {
@@ -82,8 +92,8 @@ hr {
 }
 
 #para {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 90px;
+    margin-bottom: 50px;
 }
 
 select {

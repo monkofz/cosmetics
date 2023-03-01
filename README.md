@@ -20,10 +20,6 @@ Integration with social media and other marketing channels to promote products a
 # Technologies Used
 A list of the programming languages, HTML,CSS ,Javascript used to build the e-commerce website.
 
-# Contributors
-A list of the project contributors, including their names, roles, and contributions.
-
-
 
 # Screenshots
 Screenshots of the e-commerce website's main pages or features, so users can see what the website looks like.
